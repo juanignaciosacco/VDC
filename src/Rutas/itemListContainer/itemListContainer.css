@@ -1,9 +1,11 @@
 h1 {
     color: darkcyan;
+    text-align: center;
 }
 
 .texto {
     background-color: aquamarine;
+    text-align: center;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 100px;

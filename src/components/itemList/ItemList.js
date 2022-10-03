@@ -1,22 +1,30 @@
-import { useState, useEffect } from "react"
-import products from '../../porductos.json'
+import { useState } from "react"
 import Item from "../item/Item"
 import './itemList.css'
+import { useEffect } from "react"
 
-const ItemList = () => {
+const ItemList = (id) => {
 
     const [productos, setProductos] = useState([])
 
-    setTimeout(() => {
-        setProductos(products)
-    }, 2000)
+    useEffect(() => {
+        fetch('https://apigenerator.dronahq.com/api/ZDpuc-Zi/products')
+        .then((res) => res.json())    
+        .then((resProd) => {
+            setTimeout(() => {
+                setProductos(resProd)
+            }, 2000)
+        }) 
+    },[])
+    console.log
 
+    console.log(productos)
     return (
         <div>
             <h1>Item List</h1>
             <div className="itemList">
                 {productos.map((prod) => (
-                    <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} />
+                    prod.categoria == id.id && <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />             
                 ))}
             </div>
         </div>

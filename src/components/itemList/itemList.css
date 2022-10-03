@@ -3,4 +3,5 @@
     flex-wrap: wrap;
     justify-content: space-around;
     overflow: auto;
+    text-align: center;
 }

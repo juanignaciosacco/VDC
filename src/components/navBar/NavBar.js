@@ -7,8 +7,8 @@ const NavBar = () => {
         <nav>
             <ul className="navBar">
                 <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'/category/:id'}>Accesorios</Link></li>
-                <li><Link to={'/category/:id'}>Alimentos</Link></li>
+                <li><Link to={'/category/Accesorios'}>Accesorios</Link></li>
+                <li><Link to={'/category/Alimentos'}>Alimentos</Link></li>
                 <li><a href='#'><CartWidget /></a></li>
             </ul>
         </nav>
