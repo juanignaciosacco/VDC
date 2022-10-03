@@ -1,0 +1,18 @@
+.item{
+    width: 500px;
+    margin: 20px;
+    border: 2px solid #3F7175;
+    border-radius: 5px;
+}
+
+.item img {
+    width: 250px;
+}
+
+.item button {
+    margin-bottom: 10px;
+}
+
+.info {
+    background-color: #3F7175;
+}

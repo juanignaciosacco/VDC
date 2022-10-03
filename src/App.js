@@ -1,20 +1,21 @@
 import './App.css';
-import ItemListContainer from './components/itemListContainer/ItemListContainer';
+import ItemListContainer from './Rutas/itemListContainer/ItemListContainer';
 import NavBar from './components/navBar/NavBar';
+import Home from './Rutas/home/Home';
+import ItemDetailsContainer from './Rutas/itemDetailsContainer/ItemDetailsContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <nav>
-          <NavBar />
-        </nav>
-      </header>
-      <main>
-        <ItemListContainer titulo='Petshop Carmela Boutique' greetings='Hola esta es mi primera pre entrega del proyecto react' />
-      </main>
-    </div>
+    <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/category/:id" element={<ItemListContainer />} />
+          <Route exact path="/item/:id" element={<ItemDetailsContainer />} />
+        </Routes> 
+    </BrowserRouter>
   );
 }
 

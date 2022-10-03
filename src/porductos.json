@@ -1,0 +1,102 @@
+[
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664735067/Petshop%20Carmela/Transportadores/transportador2_c12pga.jpg",
+        "nombre": "Transportador 1",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Perro",
+        "precio": 4500,
+        "stock": 10,
+        "categoria": "Accesorios",
+        "id": "T1"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664735067/Petshop%20Carmela/Transportadores/Transportador4_fzvfrc.jpg",
+        "nombre": "Transportador 2",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Perro",
+        "precio": 2500,
+        "stock": 15,
+        "categoria": "Accesorios",
+        "id": "T2"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664735066/Petshop%20Carmela/Transportadores/Transportador3_ahgwvl.jpg",
+        "nombre": "Transportador 3",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Gato",
+        "precio": 6500,
+        "stock": 30,
+        "categoria": "Accesorios",
+        "id": "T3"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664735066/Petshop%20Carmela/Transportadores/Transportador1_anqklu.jpg",
+        "nombre": "Transportador 4",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Gato",
+        "precio": 3500,
+        "stock": 20,
+        "categoria": "Accesorios",
+        "id": "T4"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664735060/Petshop%20Carmela/Correas/Correa1_i8daq5.jpg",
+        "nombre": "Correa 1",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Gato",
+        "precio": 3500,
+        "stock": 20,
+        "categoria": "Accesorios",
+        "id": "C1"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664735060/Petshop%20Carmela/Correas/Correa2_dmmdkw.jpg",
+        "nombre": "Correa 2",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Perro",
+        "precio": 500,
+        "stock": 3,
+        "categoria": "Accesorios",
+        "id": "C2"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664814703/Petshop%20Carmela/Alimentos/Perros/jvlxtecasnxmnhmopcar_hw3ivp.jpg",
+        "nombre": "Bolsa de comida 10kg",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Perro",
+        "precio": 3500,
+        "stock": 20,
+        "categoria": "Alimentos",
+        "id": "A1"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664814710/Petshop%20Carmela/Alimentos/Perros/pcql2wciriag8x4bslvo_cvlgvn.jpg",
+        "nombre": "Laton comida 2kg",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Perro",
+        "precio": 3500,
+        "stock": 5,
+        "categori": "Alimentos",
+        "id": "A2"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664814685/Petshop%20Carmela/Alimentos/Gatos/zeth3zilyddzctwk72aj_uvb8zh.jpg",
+        "nombre": "Bolsa comida 10kg",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Gato",
+        "precio": 3500,
+        "stock": 25,
+        "categoria": "Alimentos",
+        "id": "A3"
+    },
+    {
+        "img": "https://res.cloudinary.com/dfr76dzbh/image/upload/v1664814682/Petshop%20Carmela/Alimentos/Gatos/sngbrnpmqg0qcogofziu_y91y4x.jpg",
+        "nombre": "Laton comida 2kg",
+        "descripcion":"LLorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius, eum non atque reiciendis vitae quo dolores dignissimos provident hic maxime error doloremque aut similique et, veritatis, labore necessitatibus sequi? Sapiente ratione corrupti laborum ab debitis maxime nisi quod et ullam hic est aut, officiis saepe.",
+        "tipoAnimal": "Gato",
+        "precio": 3500,
+        "stock": 8,
+        "categoria": "Alimentos",
+        "id": "A4"
+    }
+]

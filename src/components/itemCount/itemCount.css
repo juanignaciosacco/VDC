@@ -1,0 +1,11 @@
+.contadorItem {
+    width: 100%;
+    background-color: #2F7A74;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+.contadorItem button {
+    margin: 5px;
+    height: 25px;
+}
