@@ -1,5 +1,12 @@
+import './home.css'
+
+
 const Home = () => {
-    return <div>Hola</div>
+    return (
+        <div className='texto'>
+            <h2>Mi proyecto React</h2>
+        </div>
+    )
 }
 
 export default Home

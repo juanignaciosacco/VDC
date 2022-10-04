@@ -3,7 +3,7 @@ import Item from "../item/Item"
 import './itemList.css'
 import { useEffect } from "react"
 
-const ItemList = (id) => {
+const ItemList = ({id}) => {
 
     const [productos, setProductos] = useState([])
 
@@ -16,15 +16,12 @@ const ItemList = (id) => {
             }, 2000)
         }) 
     },[])
-    console.log
 
-    console.log(productos)
     return (
         <div>
-            <h1>Item List</h1>
             <div className="itemList">
                 {productos.map((prod) => (
-                    prod.categoria == id.id && <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />             
+                    prod.categoria == id && <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />             
                 ))}
             </div>
         </div>
