@@ -15,13 +15,15 @@ const ItemList = ({id}) => {
                 setProductos(resProd)
             }, 2000)
         }) 
-    },[])
+    },[id])
+
+    const prodFiltrados = productos.filter((prod) => prod.categoria == id)
 
     return (
         <div>
             <div className="itemList">
-                {productos.map((prod) => (
-                    prod.categoria == id && <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />             
+                {prodFiltrados.map((prod) => (
+                     <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />             
                 ))}
             </div>
         </div>

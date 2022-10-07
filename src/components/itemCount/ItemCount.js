@@ -1,7 +1,7 @@
 import './itemCount.css'
 import { useState } from "react"
 
-const ItemCount = ({children, stock}) => {
+const ItemCount = ({ stock }) => {
 const [count, setCount] = useState(0)
 
 
@@ -16,7 +16,6 @@ const lessItems = () => {
 
   return (
     <div className="contadorItem">
-        {children}
         <p>Cantidad: {count}</p>
         <button onClick={lessItems}>-</button>
         <button onClick={moreItems}>+</button>
