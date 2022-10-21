@@ -1,7 +1,7 @@
 import './itemCount.css'
 import { useState } from "react"
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, onAdd }) => {
 const [count, setCount] = useState(0)
 
 
@@ -13,6 +13,9 @@ const lessItems = () => {
     count <= 0 ? alert('Tines que agregar productos para poder quitar!') : setCount(count - 1)
 }
 
+const addCountedItem = (ev) => {
+  onAdd(count)
+}
 
   return (
     <div className="contadorItem">
@@ -20,7 +23,7 @@ const lessItems = () => {
         <button onClick={lessItems}>-</button>
         <button onClick={moreItems}>+</button>
         <br />
-        <button>Agregar a carrito</button>
+        <button onClick={addCountedItem}>Agregar a carrito</button>
     </div>
   )
 }

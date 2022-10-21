@@ -1,0 +1,25 @@
+.carrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.cartInfo {
+    padding-top: 80px;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #3F7175;
+}
+
+.emptyCartText {
+    text-align: center;
+}

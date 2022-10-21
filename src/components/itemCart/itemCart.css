@@ -1,0 +1,14 @@
+.itemCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    margin: 20px;
+    border-bottom: 2px solid #3F7175;
+}
+    
+.img img {
+    width: 100px;
+}
+
