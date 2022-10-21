@@ -3,6 +3,7 @@ import { useEffect, useState, useContext } from "react";
 import './itemDetails.css';
 import ItemCount from '../itemCount/ItemCount';
 import { CartContext } from "../../contextos/CartContext";
+import { getFirestore, getDoc, doc } from "firebase/firestore";
 
 const ItemDetails = () => {
 
@@ -12,11 +13,15 @@ const ItemDetails = () => {
     const {addItemToCartList} = useContext(CartContext)
 
     useEffect(() => {
-        fetch(`https://apigenerator.dronahq.com/api/ZDpuc-Zi/products/${id}`)
-            .then((res) => res.json())
-            .then((resProd) => {
-                setProducto(resProd)
-            })
+        const db = getFirestore()
+        const itemFromId = doc(db, 'items', id)
+        getDoc(itemFromId).then((snapshot) => setProducto({id: snapshot.id, ...snapshot.data()}))
+
+        // fetch(`https://apigenerator.dronahq.com/api/ZDpuc-Zi/products/${id}`)
+        //     .then((res) => res.json())
+        //     .then((resProd) => {
+        //         setProducto(resProd)
+        //     })
     },[id])
 
     const addCounterState = (ev) => {

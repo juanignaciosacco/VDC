@@ -1,15 +1,16 @@
 import './itemListContainer.css'
 import ItemList from '../../components/itemList/ItemList'
+import FilteredItemList from '../../components/filteredItemList/FilteredItemList'
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
 
-    const {id} = useParams()
+    const {categoria} = useParams()
 
     return (
         <div>
             <h1>Productos</h1>
-            {id != " " ? <ItemList id={id} /> : <ItemList />}
+            {categoria != undefined ? <FilteredItemList categoria={categoria} /> : <ItemList/>}
         </div>
     )
 }

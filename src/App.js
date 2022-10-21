@@ -15,7 +15,7 @@ function App() {
         <ItemsProvider>
             <Routes>
               <Route exact path="/" element={<Home />} />
-              <Route exact path="/category/:id" element={<ItemListContainer />} />
+              <Route exact path="/category/:categoria" element={<ItemListContainer />} />
               <Route exact path="/itemDetails/:id" element={<ItemDetailsContainer />} />
               <Route exact path='/Cart' element={<Cart />} />
             </Routes> 

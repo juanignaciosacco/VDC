@@ -23,9 +23,13 @@ const ItemsProvider = ({ children }) => {
     }
 
     const removeItemFromCartList = (prodAQuitarId, precioProd, cantProd) => {
-        const nuevaListaProductos = productosAgregados.filter(obj => obj.id !== prodAQuitarId)
+        const nuevaListaProductos = productosAgregados.filter(prod => prod.id !== prodAQuitarId)
         setPrecioTotal(precioTotal - (precioProd * cantProd))
         setProductos(nuevaListaProductos)
+    }
+
+    const clearCartList = () => {
+
     }
 
     return (
