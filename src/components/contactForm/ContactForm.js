@@ -1,0 +1,65 @@
+import { useContext, useState } from "react"
+import { addDoc, collection, getFirestore } from "firebase/firestore"
+import { Link } from "react-router-dom"
+import './contactForm.css'
+import { CartContext } from "../../contextos/CartContext"
+
+const ContactForm = () => {
+
+    const emptyForm = {nombre: ' ', email: ' ', telefono: ' '}
+    const { clearAllItems, productosAgregados } = useContext(CartContext)
+    const [user, setUser] = useState(emptyForm)
+
+    const [idOrden, setIdOrden] = useState()
+
+    const changeHandler = (ev) => {
+        setUser({...user, [ev.target.name]: ev.target.value})
+    }
+
+    const submitHandler = (ev) => {
+        ev.preventDefault()
+        const db = getFirestore()
+        const formularioContacto = collection(db, 'orders')
+        addDoc(formularioContacto, {'user': user, 'item': productosAgregados}).then((snapshot) => {
+            setIdOrden(snapshot.id)
+        })
+    }
+
+    const clickHandler = () => {
+        setUser(emptyForm)
+        setIdOrden('')
+        clearAllItems()
+    }
+
+    return (
+        <div>
+            <h1>Formulario contacto</h1>
+            <div className="contactForm">
+                {idOrden ? (
+                    <div>
+                        <p>Tu orden de compra fue ingresada con exito con ID: {idOrden}</p>
+                        <Link to={'/'}><button onClick={clickHandler}>Volver</button></Link>
+                    </div>
+                ):(
+                    <form onSubmit={submitHandler}>
+                        <div>
+                            <label htmlFor="nombre">Nombre</label>
+                            <input name="nombre" id="nombre" value={user.nombre} onChange={changeHandler} />
+                        </div>
+                        <div>
+                            <label htmlFor="email">Email</label>
+                            <input name="email" id="email" value={user.email} onChange={changeHandler} />
+                        </div>
+                        <div>
+                            <label htmlFor="telefono">Telefono</label>
+                            <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
+                        </div>
+                        <button>Enviar Orden</button>
+                    </form>
+                )}
+            </div>
+        </div>
+    )
+}
+
+export default ContactForm

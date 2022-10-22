@@ -6,7 +6,11 @@ import ItemCart from "../itemCart/ItemCart"
 
 const Cart = () => {
 
-    const {productosAgregados, precioTotal} = useContext(CartContext)
+    const {productosAgregados, precioTotal, totalItems, clearAllItems} = useContext(CartContext)
+
+    const limpiarCarrito = () => {
+        clearAllItems()
+    }
 
     return (
         <div>
@@ -17,6 +21,7 @@ const Cart = () => {
                 {productosAgregados.map((prod) => (
                     <ItemCart imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={null} cantidad={prod.cantidad} precio={prod.precio} key={prod.id} id={prod.id} />   
                 ))}
+                <button onClick={limpiarCarrito}>Quitar todos los productos</button>
                 </div>
                 ):(
                     <div className="emptyCartText">
@@ -27,8 +32,9 @@ const Cart = () => {
                 
                 <div className="cartInfo">
                     <h3>Informacion Carrito</h3>
+                    <p>Cantidad de prodctos en carrto: {totalItems}</p>
                     <p>Precio total: ${precioTotal}</p>
-                    <button>Comprar</button>
+                    <Link to={'/formularioContacto'}><button>Comprar</button></Link>
                 </div>
             </div>
         </div>

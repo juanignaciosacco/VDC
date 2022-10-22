@@ -16,12 +16,6 @@ const ItemDetails = () => {
         const db = getFirestore()
         const itemFromId = doc(db, 'items', id)
         getDoc(itemFromId).then((snapshot) => setProducto({id: snapshot.id, ...snapshot.data()}))
-
-        // fetch(`https://apigenerator.dronahq.com/api/ZDpuc-Zi/products/${id}`)
-        //     .then((res) => res.json())
-        //     .then((resProd) => {
-        //         setProducto(resProd)
-        //     })
     },[id])
 
     const addCounterState = (ev) => {

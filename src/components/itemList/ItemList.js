@@ -26,7 +26,7 @@ const ItemList = () => {
         <div>
             <div className="itemList">
                 {productos.map((prod) => (
-                        <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />
+                    <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />
                 ))}  
             </div>
         </div>

@@ -8,7 +8,6 @@ const FilteredItemList = ({categoria}) => {
     const [productosFiltrados, setProductosFiltrados] = useState([])
 
     useEffect(() => {
-        console.log(categoria)
         const db = getFirestore()
         const itemsFiltrados = collection(db, 'items')
         const q = query(itemsFiltrados, where('categoria', '==', categoria))
