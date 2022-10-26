@@ -33,31 +33,30 @@ const ItemDetails = () => {
         addItemToCartList(productoACarrito)
     }
 
-    // Object.keys(producto).length === 0
     return (
         <div className="itemsDetails">
-        { error !== '' ? (
-            <div>
-                <p>{error}</p>
+            { error !== '' ? (
+                <div>
+                    <p>{error}</p>
+                </div>
+            ):(
+                <div>
+                <div className="imgDetails">
+                <img src={producto.img} alt='Imagen Producto' />
+                </div>
+                <div className="infoDetails">
+                    <h3>{producto.nombre}</h3>
+                    <p>{producto.tipoAnimal}</p>
+                    <p>{producto.descripcion}</p>
+                    <p>Stock: {producto.stock}</p>
+                    <p>${producto.precio}</p>
+                    <p>Cantidad seleccionada: {contador}</p>
+                    {contador === 0 ? <ItemCount stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button className="btnFinalizarCompra" onClick={buttonClickHandler}>Finalizar compra</button></Link>}
+                </div>
             </div>
-        ):(
-            <div>
-            <div className="imgDetails">
-            <img src={producto.img} alt='Imagen Producto' />
-            </div>
-            <div className="infoDetails">
-                <h3>{producto.nombre}</h3>
-                <p>{producto.tipoAnimal}</p>
-                <p>{producto.descripcion}</p>
-                <p>Stock: {producto.stock}</p>
-                <p>${producto.precio}</p>
-                <p>Cantidad seleccionada: {contador}</p>
-                {contador === 0 ? <ItemCount stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button className="btnFinalizarCompra" onClick={buttonClickHandler}>Finalizar compra</button></Link>}
-            </div>
+            )}
         </div>
-        )}
-        </div>
-        )
+    )
 }
 
 export default ItemDetails

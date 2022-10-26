@@ -2,7 +2,7 @@ import './itemCart.css'
 import { useContext } from 'react'
 import { CartContext } from '../../contextos/CartContext'
 
-const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, stock, id}) => {
+const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, id}) => {
 
     const { removeItemFromCartList } = useContext(CartContext)
 
@@ -25,7 +25,7 @@ const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, stock, id})
                 <button onClick={quitarProducto}>Quitar producto</button>
             </div>
         </div>
-         )
+    )
 }
 
 export default ItemCart

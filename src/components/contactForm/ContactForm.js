@@ -9,7 +9,6 @@ const ContactForm = () => {
     const emptyForm = {nombre: ' ', email: ' ', telefono: ' '}
     const { clearAllItems, productosAgregados } = useContext(CartContext)
     const [user, setUser] = useState(emptyForm)
-
     const [idOrden, setIdOrden] = useState()
 
     const changeHandler = (ev) => {
@@ -35,7 +34,6 @@ const ContactForm = () => {
                 stock: prod.stock - prod.cantidad
             })
         });
-
     }
 
     const clickHandler = () => {

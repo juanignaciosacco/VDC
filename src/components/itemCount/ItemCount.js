@@ -4,7 +4,6 @@ import { useState } from "react"
 const ItemCount = ({ stock, onAdd }) => {
 const [count, setCount] = useState(0)
 
-
 const moreItems = () => {
   count >= stock ? alert('No quedan mas productos en stock') : setCount(count + 1)
 }
