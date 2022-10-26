@@ -19,3 +19,18 @@
     height: 40px;
     width: 250px;
 }
+
+.item--outOfStock {
+    filter: grayscale(100);
+}
+
+.warning {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    transform: rotate(-45deg);
+}

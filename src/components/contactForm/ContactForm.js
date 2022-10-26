@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { addDoc, collection, getFirestore } from "firebase/firestore"
+import { addDoc, collection, getFirestore, updateDoc, doc } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import './contactForm.css'
 import { CartContext } from "../../contextos/CartContext"
@@ -18,11 +18,24 @@ const ContactForm = () => {
 
     const submitHandler = (ev) => {
         ev.preventDefault()
+        stockUpdate()
         const db = getFirestore()
         const formularioContacto = collection(db, 'orders')
         addDoc(formularioContacto, {'user': user, 'item': productosAgregados}).then((snapshot) => {
             setIdOrden(snapshot.id)
         })
+    }
+    
+    const stockUpdate = () => {
+        const db = getFirestore()
+        const items2 = collection(db, 'items')
+        productosAgregados.forEach(prod => {
+            const item = doc(items2, `${prod.id}`)
+            updateDoc(item, {
+                stock: prod.stock - prod.cantidad
+            })
+        });
+
     }
 
     const clickHandler = () => {
