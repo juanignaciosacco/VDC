@@ -13,7 +13,7 @@ const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, stock, id})
     return (
         <div className='itemCart'>
             <div className="img">
-                <img src={imgUrl} />
+                <img src={imgUrl} alt="Imagen de proucto de carrito"/>
             </div>
             <div>
                 <h3>{nombreProd}</h3>

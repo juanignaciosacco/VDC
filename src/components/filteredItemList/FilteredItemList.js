@@ -23,6 +23,7 @@ const FilteredItemList = ({categoria}) => {
 
     return (
     <div className="itemList">
+        <h1>{categoria}</h1>
         {productosFiltrados.map((prod) => (
             <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />
         ))}

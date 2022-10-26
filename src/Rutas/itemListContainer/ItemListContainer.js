@@ -9,8 +9,7 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <h1>Productos</h1>
-            {categoria != undefined ? <FilteredItemList categoria={categoria} /> : <ItemList/>}
+            {categoria !== undefined ? <FilteredItemList categoria={categoria} /> : <ItemList/>}
         </div>
     )
 }

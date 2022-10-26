@@ -15,7 +15,7 @@ const ItemsProvider = ({ children }) => {
             let found = false
             productosAgregados.forEach((prod) => {
                 if (prod.id === producto.id) {
-                    prod.cantidad = prod.cantidad + producto.cantidad
+                    prod.cantidad += producto.cantidad
                     found = true
                 }
             })

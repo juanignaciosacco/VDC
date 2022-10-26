@@ -1,6 +1,10 @@
+h2 {
+    color: #0f807f;
+}
+
 .footer {
     text-align: center;
-    margin: 0 auto;
+    margin: 50px auto;
     border-top: solid 1px #7AB8BF;
     width: 80%;
 }
