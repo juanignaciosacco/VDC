@@ -13,17 +13,17 @@ const lessItems = () => {
     count <= 0 ? alert('Tines que agregar productos para poder quitar!') : setCount(count - 1)
 }
 
-const addCountedItem = (ev) => {
+const addCountedItem = () => {
   onAdd(count)
 }
 
   return (
     <div className="contadorItem">
         <p>Cantidad: {count}</p>
-        <button onClick={lessItems}>-</button>
-        <button onClick={moreItems}>+</button>
+        <button className='btnCant' onClick={lessItems}>-</button>
+        <button className='btnCant' onClick={moreItems}>+</button>
         <br />
-        <button onClick={addCountedItem}>Agregar a carrito</button>
+        <button className='btnAgregar' onClick={addCountedItem}>Agregar a carrito</button>
     </div>
   )
 }

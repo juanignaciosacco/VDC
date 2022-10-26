@@ -34,7 +34,7 @@ const Cart = () => {
                     <h3>Informacion Carrito</h3>
                     <p>Cantidad de prodctos en carrto: {totalItems}</p>
                     <p>Precio total: ${precioTotal}</p>
-                    <Link to={'/formularioContacto'}><button>Comprar</button></Link>
+                    {productosAgregados.length != 0 && <Link to={'/formularioContacto'}><button>Comprar</button></Link>}
                 </div>
             </div>
         </div>

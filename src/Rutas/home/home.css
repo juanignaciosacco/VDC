@@ -1,9 +1,13 @@
+.imgPortada {
+    width: 100%;
+}
+
 .texto {
-    background-color: aquamarine;
+    background-color: #7AB8BF;
     text-align: center;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 100px;
-    padding: 50px;
-    width: 500px;
+    padding: 10px;
+    width: 75%
 }

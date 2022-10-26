@@ -1,6 +1,6 @@
 import './navBar.css'
 import CartWidget from "../cartWidget/CartWidget"
-import Logo from '../../CARMELA.svg'
+import Logo from '../../CARMELA.png'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {

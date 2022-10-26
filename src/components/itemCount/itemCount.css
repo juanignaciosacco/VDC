@@ -9,3 +9,17 @@
     margin: 5px;
     height: 25px;
 }
+
+.btnCant {
+    font-size: 20px;
+    line-height: 20px;
+    width: 100px;
+    height: 40px;
+}
+
+.btnAgregar {
+    font-size: 15px;
+    line-height: 20px;
+    width: 250px;
+    height: 50px;
+}

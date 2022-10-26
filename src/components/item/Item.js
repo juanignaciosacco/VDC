@@ -12,7 +12,7 @@ const Item = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, stock, id}) => 
                     {stock != null && <p>Stock: {stock}</p>}
                     {cantidad != null && <p>Cantidad: {cantidad}</p>}
                     <p>${precio}</p>
-                    <button><Link to={`/itemDetails/${id}`}>Ver detalle</Link></button>
+                    <Link to={`/itemDetails/item/${id}`}><button>Ver detalle</button></Link>
                 </div>
         </div>
     )

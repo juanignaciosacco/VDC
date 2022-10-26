@@ -9,10 +9,13 @@
     width: 250px;
 }
 
-.item button {
-    margin-bottom: 10px;
-}
-
 .info {
     background-color: #3F7175;
+}
+
+.info button {
+    margin-bottom: 10px;
+    font-size: 16px;
+    height: 40px;
+    width: 250px;
 }

@@ -1,5 +1,9 @@
 h1 {
     color: darkcyan;
+    margin: 100px auto;
+    padding-top: 30px;
     text-align: center;
+    border-top: solid 1px #7AB8BF;
+    width: 80%;
 }
 

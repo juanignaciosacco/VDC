@@ -15,7 +15,10 @@ const ItemDetails = () => {
     useEffect(() => {
         const db = getFirestore()
         const itemFromId = doc(db, 'items', id)
-        getDoc(itemFromId).then((snapshot) => setProducto({id: snapshot.id, ...snapshot.data()}))
+        getDoc(itemFromId).then((snapshot) => {
+            if(snapshot.exists()){
+                setProducto({id: snapshot.id, ...snapshot.data()})
+            }})
     },[id])
 
     const addCounterState = (ev) => {
@@ -29,6 +32,12 @@ const ItemDetails = () => {
 
     return (
         <div className="itemsDetails">
+        {Object.keys(producto).length === 0 ? (
+            <div>
+                <p>No existe un item con el id enviado</p>
+            </div>
+        ):(
+            <div>
             <div className="imgDetails">
             <img src={producto.img} alt='Imagen Producto' />
             </div>
@@ -39,8 +48,10 @@ const ItemDetails = () => {
                 <p>Stock: {producto.stock}</p>
                 <p>${producto.precio}</p>
                 <p>Cantidad seleccionada: {contador}</p>
-                {contador === 0 ? <ItemCount stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button onClick={buttonClickHandler}>Finalizar compra</button></Link>}
+                {contador === 0 ? <ItemCount stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button className="btnFinalizarCompra" onClick={buttonClickHandler}>Finalizar compra</button></Link>}
             </div>
+        </div>
+        )}
         </div>
         )
 }

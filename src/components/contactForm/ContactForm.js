@@ -37,8 +37,8 @@ const ContactForm = () => {
             <div className="contactForm">
                 {idOrden ? (
                     <div>
-                        <p>Tu orden de compra fue ingresada con exito con ID: {idOrden}</p>
-                        <Link to={'/'}><button onClick={clickHandler}>Volver</button></Link>
+                        <p>Tu orden de compra fue ingresada exitosamente!! ID: {idOrden}</p>
+                        <Link to={'/'}><button className="btnVolver" onClick={clickHandler}>Volver</button></Link>
                     </div>
                 ):(
                     <form onSubmit={submitHandler}>
@@ -54,7 +54,7 @@ const ContactForm = () => {
                             <label htmlFor="telefono">Telefono</label>
                             <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
                         </div>
-                        <button>Enviar Orden</button>
+                        <button className="btnEnviarForm">Enviar Orden</button>
                     </form>
                 )}
             </div>

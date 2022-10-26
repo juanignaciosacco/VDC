@@ -1,7 +1,7 @@
 nav {
   padding: 10px;
-  height: 200px;
-  background-color: aquamarine;
+  height: 180px;
+  background-color: #395659;
 }
 
 .navBar {
@@ -18,15 +18,14 @@ nav {
 }
 
 a {
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
 a:hover {
-  color: blue;
+  color: #7AB8BF;
 }
 
 .logo {
-  /* height: 100px; */
-  width: 200px;
+  width: 180px;
 }
