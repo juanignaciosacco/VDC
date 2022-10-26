@@ -9,6 +9,7 @@ const ItemDetails = () => {
 
     const [producto, setProducto] = useState({})
     const [contador, setContador] = useState(0)
+    const [error, setError] = useState('')
     const {id} = useParams()
     const {addItemToCartList} = useContext(CartContext)
 
@@ -18,6 +19,8 @@ const ItemDetails = () => {
         getDoc(itemFromId).then((snapshot) => {
             if(snapshot.exists()){
                 setProducto({id: snapshot.id, ...snapshot.data()})
+            } else {
+                setError('Este producto no existe')
             }})
     },[id])
 
@@ -30,11 +33,12 @@ const ItemDetails = () => {
         addItemToCartList(productoACarrito)
     }
 
+    // Object.keys(producto).length === 0
     return (
         <div className="itemsDetails">
-        {Object.keys(producto).length === 0 ? (
+        { error !== '' ? (
             <div>
-                <p>No existe un item con el id enviado</p>
+                <p>{error}</p>
             </div>
         ):(
             <div>

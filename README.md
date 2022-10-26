@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Mi proyecto React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Petshop Carmela Ecommerce.
 
-## Available Scripts
+### Comentarios utiles
 
-In the project directory, you can run:
+En la pagina inicial **Home** se muestra el listado de todos los items sin filtrar.
 
-### `npm start`
+Separe los items en 2 categorias **Accesorios y Alimentos**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El cartWidget y los iconos del Footer son traidos de la dependenci de Fontawesome
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Cuando se crea la orden de compra (luego de que en el carro se da click en comprar y se llena y envia el formulario), la cantidad de items comprados se modifican del firebase con el metodo updateDoc() con logica en el componente de ContactForm.js. Tambien si un item llega a quedar sin stock se actualiza automaticamente en el listado y lo pone en color gris con un cartel avisando que no ha stock. 
 
-### `npm test`
+En el itemCount no se puede seleccionar menos de 0 itemos o mas del stock que hay, de lo contrario salta una alerta.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Si se intenta inyectar un id de un item que no existe en el listado, aparece un cartel avisando que el item no ingresado no existe.
 
-### `npm run build`
+Cundo se finaliza la compra, el carrito vuelve a estar vacio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cada orden de compra creada queda guardada en firestore, con los datos del usuario y los items comprados.
