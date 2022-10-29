@@ -1,14 +1,14 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import ItemListContainer from './routes/itemListContainer/ItemListContainer';
-import Home from './routes/home/Home';
-import ItemDetailsContainer from './routes/itemDetailsContainer/ItemDetailsContainer';
-import Cart from './components/cart/Cart';
-import NavBar from './components/navBar/NavBar'
-import { ItemsProvider } from './contextos/CartContext'
-import ContactForm from './components/contactForm/ContactForm';
-import Footer from './components/footer/Footer';
+import ItemListContainer from './routes/ItemListContainer/ItemListContainer';
+import Home from './routes/Home/Home';
+import ItemDetailsContainer from './routes/ItemDetailsContainer/ItemDetailsContainer';
+import Cart from './components/Cart/Cart';
+import NavBar from './components/NavBar/NavBar'
+import { ItemsProvider } from './Contextos/CartContext'
+import ContactForm from './components/ContactForm/ContactForm';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

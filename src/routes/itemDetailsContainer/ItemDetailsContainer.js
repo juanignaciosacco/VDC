@@ -1,4 +1,4 @@
-import ItemDetails from "../../components/itemDetails/ItemDetails"
+import ItemDetails from "../../components/ItemDetails/ItemDetails"
 import { useParams } from "react-router-dom"
 
 const ItemDetailsContainer = () => {

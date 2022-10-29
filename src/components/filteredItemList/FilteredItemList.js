@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
-import Item from '../item/Item';
-import '../itemList/itemList.css'
+import Item from '../Item/Item';
+import '../ItemList/itemList.css'
 
 const FilteredItemList = ({categoria}) => {
 

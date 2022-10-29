@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { addDoc, collection, getFirestore, updateDoc, doc } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import './contactForm.css'
-import { CartContext } from "../../contextos/CartContext"
+import { CartContext } from "../../Contextos/CartContext"
 
 const ContactForm = () => {
 

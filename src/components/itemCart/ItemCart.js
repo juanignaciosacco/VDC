@@ -1,6 +1,6 @@
 import './itemCart.css'
 import { useContext } from 'react'
-import { CartContext } from '../../contextos/CartContext'
+import { CartContext } from '../../Contextos/CartContext'
 
 const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, id}) => {
 
