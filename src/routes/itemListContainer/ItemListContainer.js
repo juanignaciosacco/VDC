@@ -1,4 +1,4 @@
-import './ItemListContainer.css'
+import './itemListContainer.css'
 import ItemList from '../../components/ItemList/ItemList'
 import FilteredItemList from '../../components/FilteredItemList/FilteredItemList'
 import { useParams } from 'react-router-dom'
