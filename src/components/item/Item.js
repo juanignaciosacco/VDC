@@ -19,9 +19,9 @@ const Item = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, stock, id}) => 
                 </div>
             ):(
                 <div className="item item--outOfStock">
-                    <p className='warning'>Sin stock!!!</p>
                     <img src={imgUrl} alt='Imagen Producto' />
                     <div className="info">
+                    <p className='warning'>Sin stock!!!</p>
                         <h3>{nombreProd}</h3>
                         <p>{tipoAnimal}</p>
                         <p>Stock: {stock}</p>

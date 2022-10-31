@@ -6,7 +6,7 @@ import Home from './routes/Home/Home';
 import ItemDetailsContainer from './routes/ItemDetailsContainer/ItemDetailsContainer';
 import Cart from './components/Cart/Cart';
 import NavBar from './components/NavBar/NavBar'
-import { ItemsProvider } from './Contextos/CartContext'
+import { ItemsProvider } from './contextos/CartContext'
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
 
