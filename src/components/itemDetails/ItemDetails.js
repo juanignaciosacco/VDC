@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import './itemDetails.css';
-import ItemCount from '../ItemCount/ItemCount';
+import ItemCount from '../itemCount/ItemCount';
 import { CartContext } from "../../contextos/CartContext";
 import { getFirestore, getDoc, doc } from "firebase/firestore";
 

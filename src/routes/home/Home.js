@@ -1,5 +1,5 @@
 import './home.css'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import ItemListContainer from '../itemListContainer/ItemListContainer'
 import Portada from '../../assets/Portada2.jpg'
 
 const Home = () => {

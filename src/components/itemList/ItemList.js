@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Item from "../Item/Item"
+import Item from "../item/Item"
 import './itemList.css'
 import { useEffect } from "react"
 import { collection, getDocs, getFirestore } from 'firebase/firestore'

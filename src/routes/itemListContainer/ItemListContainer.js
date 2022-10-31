@@ -1,6 +1,6 @@
 import './itemListContainer.css'
-import ItemList from '../../components/ItemList/ItemList'
-import FilteredItemList from '../../components/FilteredItemList/FilteredItemList'
+import ItemList from '../../components/itemList/ItemList'
+import FilteredItemList from '../../components/filteredItemList/FilteredItemList'
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
