@@ -20,7 +20,7 @@ const Cart = () => {
                 (
                     <div className="items">
                         {productosAgregados.map((prod) => (
-                            <ItemCart imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={null} cantidad={prod.cantidad} precio={prod.precio} key={prod.id} id={prod.id} />   
+                            <ItemCart imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} cantidad={prod.cantidad} precio={prod.precio} key={prod.id} id={prod.id} />   
                         ))}
                         <button onClick={limpiarCarrito}>Quitar todos los productos</button>
                     </div>
