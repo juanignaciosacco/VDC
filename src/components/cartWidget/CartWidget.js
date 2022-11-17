@@ -10,7 +10,7 @@ const CartWidget = () => {
     const [totalItemsCart, setTotalItmesCart] = useState(0)
 
     useEffect(() => {
-        totalItems > 0 && setTotalItmesCart(totalItems)
+        totalItems >= 0 && setTotalItmesCart(totalItems)
     }, [totalItems])
 
     return (
