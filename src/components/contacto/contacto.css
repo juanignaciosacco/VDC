@@ -1,0 +1,15 @@
+h2 {
+    margin: 10px;
+}
+
+.formularioContacto {
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+}
+
+textarea { 
+    border: 2px solid black;
+    height: 150px;
+    margin-bottom: 10px;
+}

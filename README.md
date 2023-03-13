@@ -6,8 +6,6 @@ Petshop Carmela Ecommerce.
 
 En la pagina inicial **Home** se muestra el listado de todos los items sin filtrar.
 
-Separe los items en 2 categorias **Accesorios y Alimentos**.
-
 El cartWidget y los iconos del Footer son traidos de la dependencia de Fontawesome.
 
 Cuando se crea la orden de compra (luego de que en el carro se da click en comprar y se llena y envia el formulario), la cantidad de items comprados se modifican del firebase con el metodo updateDoc() con logica en el componente de ContactForm.js. Tambien si un item llega a quedar sin stock se actualiza automaticamente en el listado y lo pone en color gris con un cartel avisando que no ha stock. 

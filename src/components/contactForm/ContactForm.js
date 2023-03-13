@@ -25,13 +25,14 @@ const ContactForm = () => {
         addDoc(formularioContacto, {'user': user, 'item': productosAgregados}).then((snapshot) => {
             setIdOrden(snapshot.id)
         })
-
+        
         emailjs.sendForm('service_ywhqy7s', 'template_n3av58s', ev.target, 'POqrx_snIIGH6dOSx')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
             console.log(error.text);
         });
+        setUser({...user, idCompra: idOrden})
     }
     
     const stockUpdate = () => {

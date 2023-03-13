@@ -51,7 +51,7 @@ export default function Example() {
                   <div className="flex">
                     <Link className='text-gray-300 text-lg hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' to={'/'}>Home</Link>
                     <Link className='text-gray-300 text-lg hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' to={'/category/Accesorios'}>Productos</Link>
-                    <Link className='text-gray-300 text-lg hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' to={'/category/Alimentos'}>Contacto</Link>
+                    <Link className='text-gray-300 text-lg hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' to={'/contacto'}>Contacto</Link>
                   </div>
                 </div>
               </div>

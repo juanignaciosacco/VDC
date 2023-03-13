@@ -7,8 +7,8 @@ const Home = () => {
         <div>
             <img className='imgPortada' src={Portada} />
             <div className='texto'>
-                <h2 className='text-2xl m-2'>Sobre nosotros</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo alias deserunt ipsam est iure doloremque ut molestiae libero. Tempore ut accusamus amet doloribus harum odit, architecto laborum cupiditate beatae dignissimos.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo alias deserunt ipsam est iure doloremque ut molestiae libero. Tempore ut accusamus amet doloribus harum odit, architecto laborum cupiditate beatae dignissimos.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2 className='text-2xl m-2'>Vidrios de la costa</h2>
+                <p>Es un movimiento de reciclaje con botellas de vidrio, a partir de ellas elaboramos artesanalmente nuestras originales piezas.</p>
             </div>
             <ItemListContainer />
         </div>

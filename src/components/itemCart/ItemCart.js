@@ -22,7 +22,7 @@ const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, id}) => {
                 <p className='m-1.5'>Cantidad: {cantidad}</p>
             </div>
             <div>
-                <button onClick={quitarProducto} className='px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full'>Quitar producto</button>
+                <button onClick={quitarProducto} className='btnQuitar transition-colors duration-300 bg-slate-200 hover:bg-slate-600 text-black-100 shadow-slate-400/30'>Quitar</button>
             </div>
         </div>
     )
