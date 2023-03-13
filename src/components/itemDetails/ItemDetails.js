@@ -15,7 +15,7 @@ const ItemDetails = () => {
 
     useEffect(() => {
         const db = getFirestore()
-        const itemFromId = doc(db, 'items', id)
+        const itemFromId = doc(db, 'productos', id)
         getDoc(itemFromId).then((snapshot) => {
             if(snapshot.exists()){
                 setProducto({id: snapshot.id, ...snapshot.data()})
@@ -42,16 +42,15 @@ const ItemDetails = () => {
             ):(
                 <div>
                 <div className="imgDetails">
-                <img src={producto.img} alt='Imagen Producto' />
+                <img src={producto.imgUrl} className='mx-auto' alt='Imagen Producto' />
                 </div>
                 <div className="infoDetails">
-                    <h3>{producto.nombre}</h3>
-                    <p>{producto.tipoAnimal}</p>
-                    <p>{producto.descripcion}</p>
-                    <p>Stock: {producto.stock}</p>
-                    <p>${producto.precio}</p>
-                    <p>Cantidad seleccionada: {contador}</p>
-                    {contador === 0 ? <ItemCount stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button className="btnFinalizarCompra" onClick={buttonClickHandler}>Finalizar compra</button></Link>}
+                    <h3 className="text-2xl">{producto.Nombre}</h3>
+                    <p className="m-2">{producto.Descripcion}</p>
+                    <p className="m-2">Stock: {producto.Stock}</p>
+                    <p className="m-2">${producto.Precio}</p>
+                    <p className="m-2">Cantidad seleccionada: {contador}</p>
+                    {contador === 0 ? <ItemCount className='m-2' stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button className="my-1.5 px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full" onClick={buttonClickHandler}>Finalizar compra</button></Link>}
                 </div>
             </div>
             )}

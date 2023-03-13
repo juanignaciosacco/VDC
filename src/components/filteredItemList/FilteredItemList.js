@@ -9,22 +9,22 @@ const FilteredItemList = ({categoria}) => {
 
     useEffect(() => {
         const db = getFirestore()
-        const itemsFiltrados = collection(db, 'items')
-        const q = query(itemsFiltrados, where('categoria', '==', categoria))
-        getDocs(q).then((snapshot) => {
+        const itemsFiltrados = collection(db, 'productos')
+        // const q = query(itemsFiltrados, where('categoria', '==', categoria))
+        getDocs(itemsFiltrados).then((snapshot) => {
             const arrayItems = snapshot.docs.map((prod) => ({
                 id: prod.id,
                 ...prod.data()
             }))
             setProductosFiltrados(arrayItems)
         })
-    },[categoria])
+    },[])
 
     return (
         <div className="itemList">
-            <h1>{categoria}</h1>
+            <h1 className='text-4xl'>Productos</h1>
             {productosFiltrados.map((prod) => (
-                <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />
+                <Item imgUrl={prod.imgUrl} nombreProd={prod.Nombre} stock={prod.Stock} precio={prod.Precio} key={prod.id} id={prod.id} />
             ))}
         </div>
     )

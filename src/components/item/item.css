@@ -1,16 +1,17 @@
 .item{
     width: 500px;
     margin: 20px;
-    border: 2px solid #3F7175;
+    border: 2px solid #C7AC54;
     border-radius: 5px;
 }
 
 .item img {
-    width: 250px;
+    margin: 20px auto 20px;
+    height: 250px;
 }
 
 .info {
-    background-color: #3F7175;
+    background-color: #C7AC54;
 }
 
 .info button {

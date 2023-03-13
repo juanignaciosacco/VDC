@@ -1,9 +1,9 @@
 .itemsDetails {
     text-align: center;
-    width: 50%;
+    width: 30%;
     margin: 50px auto;
     border: 1px solid ;
-    background-color: #3F7175;
+    background-color: #FAEAB4;
 }
 
 h3 {
@@ -11,7 +11,8 @@ h3 {
 }
 
 .imgDetails {
-    background-color: #fff;
+    margin: 10px;
+    background-color: #FAEAB4;
 }
 
 .imgDetails img {
@@ -21,7 +22,7 @@ h3 {
 .infoDetails {
     margin-top: 15px;
     padding-top: 15px;
-    background-color: #3F7175;
+    background-color: #FAD869;
 }
 
 .btnFinalizarCompra {

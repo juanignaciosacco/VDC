@@ -1,6 +1,7 @@
 import './cartWidget.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { ShoppingCartIcon } from '@heroicons/react/24/outline'
 import { CartContext } from '../../contextos/CartContext'
 import { useContext, useEffect, useState } from 'react'
 
@@ -14,9 +15,10 @@ const CartWidget = () => {
     }, [totalItems])
 
     return (
-        <div>
+        <div className='flex flex-row'>
             {totalItemsCart !== 0 && totalItemsCart}
-            <i className='icono'><FontAwesomeIcon icon={faCartShopping} /></i>
+            {/* <i className='icono'><FontAwesomeIcon icon={faCartShopping} /></i> */}
+            <ShoppingCartIcon className="ml-1 h-6 w-6 text-gray-400" />
         </div>
     )
 }

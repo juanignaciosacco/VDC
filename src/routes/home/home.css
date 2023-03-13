@@ -3,7 +3,7 @@
 }
 
 .texto {
-    background-color: #7AB8BF;
+    background-color: #FAD869;
     text-align: center;
     border-radius: 10px;
     margin: 0 auto;
@@ -11,3 +11,8 @@
     padding: 10px;
     width: 75%
 }
+
+.text-2xl {
+    color: #7A6A33;
+}
+    

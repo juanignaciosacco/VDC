@@ -1,4 +1,13 @@
-nav {
+.bg-gray-800 {
+  background-color: #FAEAB4;
+}
+
+.text-gray-300 {
+  color: #7A7258;
+}
+
+
+/* nav {
   padding: 10px;
   height: 180px;
   background-color: #395659;
@@ -29,3 +38,12 @@ a:hover {
 .logo {
   width: 180px;
 }
+
+
+.show {
+  display: none;
+}
+
+.hidden {
+  display: none;
+} */

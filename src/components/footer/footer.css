@@ -1,16 +1,16 @@
 h2 {
-    color: #0f807f;
+    color: #7A7258;
 }
 
 .footer {
     text-align: center;
     margin: 50px auto;
-    border-top: solid 1px #7AB8BF;
+    border-top: solid 1px #FAD869;
     width: 80%;
 }
 
 .footer i {
     font-size: 40px;
     margin: 10px;
-    color: #3F7175;
+    color: #7A7258;
 }

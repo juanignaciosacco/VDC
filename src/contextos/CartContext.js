@@ -21,7 +21,7 @@ const ItemsProvider = ({ children }) => {
             })
             found === false && setProductos([...productosAgregados, producto])
         }
-        setPrecioTotal(precioTotal + (producto.precio * producto.cantidad))
+        setPrecioTotal(precioTotal + (producto.Precio * producto.cantidad))
         setTotalItems(totalItems + producto.cantidad)
     }
 

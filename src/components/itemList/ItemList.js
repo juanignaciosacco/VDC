@@ -10,7 +10,7 @@ const ItemList = () => {
 
     useEffect(() => {
         const db = getFirestore()
-        const itemsCollection = collection(db, 'items')
+        const itemsCollection = collection(db, 'productos')
         getDocs(itemsCollection).then((snapshot) => {
             const arrayProducts = snapshot.docs.map((prod) => ({
                 id: prod.id,
@@ -22,10 +22,10 @@ const ItemList = () => {
 
     return (
         <div>
-            <h1>Productos</h1>
+            <h1 className="text-4xl">Productos Destacados</h1>
             <div className="itemList">
                 {productos.map((prod) => (
-                    <Item imgUrl={prod.img} nombreProd={prod.nombre} tipoAnimal={prod.tipoAnimal} stock={prod.stock} precio={prod.precio} key={prod.id} id={prod.id} />
+                    prod.Destacado && <Item imgUrl={prod.imgUrl} nombreProd={prod.Nombre} tipoAnimal={prod.tipoAnimal} stock={prod.Stock} precio={prod.Precio} key={prod.id} id={prod.id} />
                 ))}  
             </div>
         </div>

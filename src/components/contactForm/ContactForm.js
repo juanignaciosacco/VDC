@@ -1,5 +1,7 @@
 import { useContext, useState } from "react"
 import { addDoc, collection, getFirestore, updateDoc, doc } from "firebase/firestore"
+import ReCAPTCHA from "react-google-recaptcha"
+import emailjs from '@emailjs/browser'
 import { Link } from "react-router-dom"
 import './contactForm.css'
 import { CartContext } from "../../contextos/CartContext"
@@ -19,10 +21,17 @@ const ContactForm = () => {
         ev.preventDefault()
         stockUpdate()
         const db = getFirestore()
-        const formularioContacto = collection(db, 'orders')
+        const formularioContacto = collection(db, 'ordenes')
         addDoc(formularioContacto, {'user': user, 'item': productosAgregados}).then((snapshot) => {
             setIdOrden(snapshot.id)
         })
+
+        emailjs.sendForm('service_ywhqy7s', 'template_n3av58s', ev.target, 'POqrx_snIIGH6dOSx')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
     }
     
     const stockUpdate = () => {
@@ -44,7 +53,7 @@ const ContactForm = () => {
 
     return (
         <div>
-            <h1>Formulario contacto</h1>
+            <h1 className="text-4xl">Formulario contacto</h1>
             <div className="contactForm">
                 {idOrden ? (
                     <div>
@@ -52,19 +61,18 @@ const ContactForm = () => {
                         <Link to={'/'}><button className="btnVolver" onClick={clickHandler}>Volver</button></Link>
                     </div>
                 ):(
-                    <form onSubmit={submitHandler}>
-                        <div>
-                            <label htmlFor="nombre">Nombre</label>
-                            <input name="nombre" id="nombre" value={user.nombre} onChange={changeHandler} />
-                        </div>
-                        <div>
-                            <label htmlFor="email">Email</label>
-                            <input name="email" id="email" value={user.email} onChange={changeHandler} />
-                        </div>
-                        <div>
-                            <label htmlFor="telefono">Telefono</label>
-                            <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
-                        </div>
+                    <form  onSubmit={submitHandler}>
+
+                        <label htmlFor="nombre">Nombre</label>
+                        <input name="nombre" id="nombre" value={user.nombre} onChange={changeHandler} />
+
+                        <label htmlFor="email">Email</label>
+                        <input name="email" id="email" value={user.email} onChange={changeHandler} />
+
+                        <label htmlFor="telefono">Telefono</label>
+                        <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
+                    
+                        <ReCAPTCHA className="captcha" sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12" />
                         <button className="btnEnviarForm">Enviar Orden</button>
                     </form>
                 )}

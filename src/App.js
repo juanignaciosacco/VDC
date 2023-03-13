@@ -5,7 +5,7 @@ import ItemListContainer from './routes/itemListContainer/ItemListContainer';
 import Home from './routes/home/Home';
 import ItemDetailsContainer from './routes/itemDetailsContainer/ItemDetailsContainer';
 import Cart from './components/cart/Cart';
-import NavBar from './components/navBar/NavBar'
+import Example from './components/navBar/NavBar'
 import { ItemsProvider } from './contextos/CartContext'
 import ContactForm from './components/contactForm/ContactForm';
 import Footer from './components/footer/Footer';
@@ -14,7 +14,7 @@ function App() {
   return (
       <BrowserRouter>
         <ItemsProvider>
-        <NavBar />
+        <Example />
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/category/:categoria" element={<ItemListContainer />} />

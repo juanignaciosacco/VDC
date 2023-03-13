@@ -16,13 +16,13 @@ const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, id}) => {
                 <img src={imgUrl} alt="Imagen de proucto de carrito"/>
             </div>
             <div>
-                <h3>{nombreProd}</h3>
-                <p>{tipoAnimal}</p>
-                <p>Precio: ${precio}</p> 
-                <p>Cantidad: {cantidad}</p>
+                <h3 className='m-1.5'>{nombreProd}</h3>
+                <p className='m-1.5'>{tipoAnimal}</p>
+                <p className='m-1.5'>Precio: ${precio}</p> 
+                <p className='m-1.5'>Cantidad: {cantidad}</p>
             </div>
             <div>
-                <button onClick={quitarProducto}>Quitar producto</button>
+                <button onClick={quitarProducto} className='px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full'>Quitar producto</button>
             </div>
         </div>
     )
