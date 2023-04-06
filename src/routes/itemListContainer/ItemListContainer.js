@@ -5,11 +5,14 @@ import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
 
-    const {categoria} = useParams()
+    const {productos} = useParams()
 
     return (
         <div>
-            {categoria !== undefined ? <FilteredItemList categoria={categoria} /> : <ItemList/>}
+
+            {productos == 'productos' ? <ItemList destacados={false} /> : <ItemList destacados={true}/>}
+
+            {/* {categoria !== undefined ? <FilteredItemList categoria={categoria} /> : <ItemList/>} */}
         </div>
     )
 }

@@ -35,3 +35,18 @@
     background-color: black;
     transform: rotate(-45deg);
 }
+
+@media only screen and (max-width: 375px) {
+    .item {
+        width: 250px;
+    }
+
+    .item img {
+        height: 125px;
+    }
+
+    .info button{
+        width: 125px;
+        height: 70px;
+    }
+}

@@ -8,7 +8,8 @@ const Home = () => {
             <img className='imgPortada' src={Portada} />
             <div className='texto'>
                 <h2 className='text-2xl m-2'>Vidrios de la costa</h2>
-                <p>Es un movimiento de reciclaje con botellas de vidrio, a partir de ellas elaboramos artesanalmente nuestras originales piezas.</p>
+                <p>Es un movimiento de reciclaje que nace en Jose Ignacio, Uruguay.</p>
+                <p>Trabajando en gastronomía vimos la cantidad de botellas que se tiran y decidimos tomar el camino del reciclaje. A partir de ellas elaboramos artesanalmente nuestros productos.</p>
             </div>
             <ItemListContainer />
         </div>

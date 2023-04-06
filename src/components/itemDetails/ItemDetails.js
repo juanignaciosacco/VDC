@@ -40,7 +40,7 @@ const ItemDetails = () => {
                     <p>{error}</p>
                 </div>
             ):(
-                <div>
+                <div className="contenedor">
                 <div className="imgDetails">
                 <img src={producto.imgUrl} className='mx-auto' alt='Imagen Producto' />
                 </div>

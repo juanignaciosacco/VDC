@@ -32,7 +32,7 @@ const Cart = () => {
                 )}
                 <div className="cartInfo">
                     <h3 className="m-5">Informacion Carrito</h3>
-                    <p className="m-1.5">Cantidad de prodctos en carrto: {totalItems}</p>
+                    <p className="m-1.5">Cantidad de prodctos en carrito: {totalItems}</p>
                     <p className="m-1.5">Precio total: ${precioTotal}</p>
                     {productosAgregados.length !== 0 && <Link to={'/formularioContacto'}><button className='px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full'>Comprar</button></Link>}
                 </div>

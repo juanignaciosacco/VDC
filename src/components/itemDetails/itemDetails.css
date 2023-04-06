@@ -1,6 +1,10 @@
+.contenedor {
+    width: 80%;
+}
+
 .itemsDetails {
     text-align: center;
-    width: 30%;
+    /* width: 30%; */
     margin: 50px auto;
     border: 1px solid ;
     background-color: #FAEAB4;
@@ -16,7 +20,7 @@ h3 {
 }
 
 .imgDetails img {
-    width: 40%;
+    /* width: 40%; */
 }
 
 .infoDetails {
@@ -30,4 +34,29 @@ h3 {
     height: 40px;
     width: 250px;
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+
+    .contenedor {
+        width: 80%;
+        margin: auto;
+    }
+
+    .imgDetails {
+        width: 60%;
+        margin: 50px auto;
+        text-align: center;
+
+    }
+
+    .imgDetails img {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .infoDetails {
+        width: 100%;
+    }
+
 }
