@@ -1,20 +1,22 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from '../../assets/logoVidrios.png'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import CartWidget from '../cartWidget/CartWidget'
 import './navBar.css'
 
 const navigation = [
-  { name: 'Home', to:'/', current: true },
+  { name: 'Home', to:'/', current: true},
   { name: 'Productos', to: '/productos', current: false },
   { name: 'Contact', to: '/contacto', current: false }
 ]
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
 
 export default function Example() {
   return (
@@ -132,7 +134,7 @@ export default function Example() {
                   as="a"
                   link={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
