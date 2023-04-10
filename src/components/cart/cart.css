@@ -45,3 +45,13 @@
         margin: 20px auto;
     }
 }
+@media only screen and (max-width: 480px) {
+    .carrito {
+        flex-direction: column;
+    }
+
+    .cartInfo {
+        width: 250px;
+        margin: 20px auto;
+    }
+}

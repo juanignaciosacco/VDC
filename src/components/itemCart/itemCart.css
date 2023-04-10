@@ -5,6 +5,7 @@
     align-items: center;
     width: 500px;
     margin: 20px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #3F7175;
 }
     
@@ -20,6 +21,18 @@
 }
 
 @media only screen and (max-width: 375px) {
+    .itemCart {
+        width: 250px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .img img {
+        width: 65px;
+    }
+}
+@media only screen and (max-width: 480px) {
     .itemCart {
         width: 250px;
         flex-wrap: wrap;

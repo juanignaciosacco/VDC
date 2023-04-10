@@ -50,3 +50,17 @@
         height: 70px;
     }
 }
+@media only screen and (min-width: 376px) and (max-width: 480px) {
+    .item {
+        width: 350px;
+    }
+
+    .item img {
+        height: 175px;
+    }
+
+    .info button{
+        width: 125px;
+        height: 70px;
+    }
+}
