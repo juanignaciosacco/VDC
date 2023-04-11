@@ -72,6 +72,9 @@ const ContactForm = () => {
 
                         <label htmlFor="telefono">Telefono</label>
                         <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
+                       
+                        <label htmlFor="idOrder">Id Orden</label>
+                        <input name="idOrden" id="idOrden" value={user.idOrden} onChange={changeHandler} />
                     
                         <ReCAPTCHA className="captcha" sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12" />
                         <button className="btnEnviarForm">Enviar Orden</button>
