@@ -29,18 +29,19 @@ const ContactForm = () => {
         emailjs.sendForm('service_ywhqy7s', 'template_n3av58s', ev.target, 'POqrx_snIIGH6dOSx')
         .then((result) => {
             console.log(result.text);
+            console.log(idOrden)
         }, (error) => {
             console.log(error.text);
         });
-        setUser({...user, idCompra: idOrden})
+        setUser({...user, idCompra: `${idOrden}`})
     }
     
     const stockUpdate = () => {
         const db = getFirestore()
-        const items2 = collection(db, 'items')
+        const items2 = collection(db, 'productos')
         productosAgregados.forEach(prod => {
-            const item = doc(items2, `${prod.id}`)
-            updateDoc(item, {
+            const producto = doc(items2, `${prod.id}`)
+            updateDoc(producto, {
                 Stock: prod.Stock - prod.cantidad
             })
         });
@@ -72,9 +73,6 @@ const ContactForm = () => {
 
                         <label htmlFor="telefono">Telefono</label>
                         <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
-                       
-                        <label htmlFor="idOrder">Id Orden</label>
-                        <input name="idOrden" id="idOrden" value={user.idOrden} onChange={changeHandler} />
                     
                         <ReCAPTCHA className="captcha" sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12" />
                         <button className="btnEnviarForm">Enviar Orden</button>

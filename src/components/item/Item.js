@@ -24,7 +24,7 @@ const Item = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, stock, id}) => 
                     <p className='warning'>Sin stock!!!</p>
                         <h3>{nombreProd}</h3>
                         <p>{tipoAnimal}</p>
-                        <p>Stock: {stock}</p>
+                        <p>Stock: SIN STOCK!!</p>
                         {cantidad != null && <p>Cantidad: {cantidad}</p>}
                         <p>${precio}</p>
                         <Link to={`/itemDetails/item/${id}`}><button className='px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full bg-slate-200 hover:bg-slate-600 text-black-100 shadow-slate-400/30'>Ver detalle</button></Link>
