@@ -41,7 +41,7 @@ const ContactForm = () => {
         productosAgregados.forEach(prod => {
             const item = doc(items2, `${prod.id}`)
             updateDoc(item, {
-                stock: prod.stock - prod.cantidad
+                Stock: prod.Stock - prod.cantidad
             })
         });
     }
