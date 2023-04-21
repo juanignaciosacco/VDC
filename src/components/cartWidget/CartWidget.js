@@ -1,6 +1,4 @@
 import './cartWidget.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { ShoppingCartIcon } from '@heroicons/react/24/outline'
 import { CartContext } from '../../contextos/CartContext'
 import { useContext, useEffect, useState } from 'react'

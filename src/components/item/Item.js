@@ -9,7 +9,6 @@ const Item = ({imgUrl, nombreProd, descripcion, dimensiones, precio, cantidad, s
                 <div className="item">
                     <img src={imgUrl} alt='Imagen Producto' />
                     <div className="info">
-                        <div className='txt'>
                             <h3>{nombreProd}</h3>
                             <p>{descripcion}</p>
                             <p>{dimensiones}</p>
@@ -17,7 +16,6 @@ const Item = ({imgUrl, nombreProd, descripcion, dimensiones, precio, cantidad, s
                             {cantidad != null && <p className='m-1.5'>Cantidad: {cantidad}</p>}
                             <p className='m-1.5'>${precio}</p>
                             <Link className='m-1.5' to={`/itemDetails/item/${id}`}><button className='px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full'>Ver detalle</button></Link>
-                        </div>
                     </div>
                 </div>
             ):(
