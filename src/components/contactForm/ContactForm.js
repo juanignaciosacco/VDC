@@ -63,20 +63,25 @@ const ContactForm = () => {
                         <Link to={'/'}><button className="btnVolver" onClick={clickHandler}>Volver</button></Link>
                     </div>
                 ):(
-                    <form  onSubmit={submitHandler}>
+                    <div>
+                        <h2>Procedimiento de compra</h2>
+                        <p>Luego de elegir los productos debe completar este formulario de contacto y un representante de vidrios de la costa se comunicara con usted para coordinar el envío y  la forma de pago.</p>
+                        <br />
+                        <form  onSubmit={submitHandler}>
 
-                        <label htmlFor="nombre">Nombre</label>
-                        <input name="nombre" id="nombre" value={user.nombre} onChange={changeHandler} />
+                            <label htmlFor="nombre">Nombre</label>
+                            <input name="nombre" id="nombre" value={user.nombre} onChange={changeHandler} />
 
-                        <label htmlFor="email">Email</label>
-                        <input name="email" id="email" value={user.email} onChange={changeHandler} />
+                            <label htmlFor="email">Email</label>
+                            <input name="email" id="email" value={user.email} onChange={changeHandler} />
 
-                        <label htmlFor="telefono">Telefono</label>
-                        <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
-                    
-                        <ReCAPTCHA className="captcha" sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12" />
-                        <button className="btnEnviarForm">Enviar Orden</button>
-                    </form>
+                            <label htmlFor="telefono">Telefono</label>
+                            <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
+                        
+                            <ReCAPTCHA className="captcha" sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12" />
+                            <button className="btnEnviarForm">Enviar Orden</button>
+                        </form>
+                    </div>
                 )}
             </div>
         </div>

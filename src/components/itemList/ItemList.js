@@ -25,12 +25,12 @@ const ItemList = ({destacados}) => {
         (<div>
             <h1 className="text-4xl">Productos Destacados</h1>
             <div className="itemList">
-                {productos.map((prod) => prod.Destacado && <Item imgUrl={prod.imgUrl} nombreProd={prod.Nombre} tipoAnimal={prod.tipoAnimal} stock={prod.Stock} precio={prod.Precio} key={prod.id} id={prod.id} />)}
+                {productos.map((prod) => prod.Destacado && <Item imgUrl={prod.imgUrl} nombreProd={prod.Nombre} stock={prod.Stock} precio={prod.Precio} descripcion={prod.Descripcion} dimensiones={prod.Dimensiones} key={prod.id} id={prod.id} />)}
             </div>
             </div>): 
             (<div className="itemList">
                 <h1 className="text-4xl">Productos</h1>
-                {productos.map((prod) => <Item imgUrl={prod.imgUrl} nombreProd={prod.Nombre} tipoAnimal={prod.tipoAnimal} stock={prod.Stock} precio={prod.Precio} key={prod.id} id={prod.id} />)}
+                {productos.map((prod) => <Item imgUrl={prod.imgUrl} nombreProd={prod.Nombre} descripcion={prod.Descripcion} dimensiones={prod.Dimensiones} stock={prod.Stock} precio={prod.Precio} key={prod.id} id={prod.id} />)}
             </div>)
             }
         </div>

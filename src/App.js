@@ -1,6 +1,5 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
 import ItemListContainer from './routes/itemListContainer/ItemListContainer';
 import Home from './routes/home/Home';
 import ItemDetailsContainer from './routes/itemDetailsContainer/ItemDetailsContainer';
