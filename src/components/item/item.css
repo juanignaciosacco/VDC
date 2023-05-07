@@ -12,7 +12,7 @@
 
 .info {
     background-color: #C7AC54;
-    min-height: 305px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     justify-content: center;

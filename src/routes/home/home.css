@@ -12,7 +12,13 @@
     width: 75%
 }
 
-.text-2xl {
-    color: #7A6A33;
+.h1Home {
+    border: none;
+    margin: 10px auto 20px;
+    padding-top: 10px;
+    font-size: 46px;
 }
-    
+
+.textoInformativo {
+    font-size: 22px;
+}

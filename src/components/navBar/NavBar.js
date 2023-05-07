@@ -1,8 +1,8 @@
-import { Fragment, useEffect } from 'react'
+import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from '../../assets/logoVidrios.png'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CartWidget from '../cartWidget/CartWidget'
 import './navBar.css'
 
@@ -44,7 +44,7 @@ export default function Example() {
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-32 w-auto lg:block"
+                    className="hidden h-40 w-auto lg:block"
                     src={Logo}
                     alt="Your Company"
                   />
