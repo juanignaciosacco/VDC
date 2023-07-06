@@ -18,11 +18,11 @@ const addCountedItem = () => {
 
   return (
     <div className="contadorItem">
-        <p>Cantidad: {count}</p>
-        <button className='px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full leading-3' onClick={lessItems}>-</button>
-        <button className='px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full leading-3' onClick={moreItems}>+</button>
+        <p className='cantidadTxt'>Cantidad: {count}</p>
+        <button className='btn btn-contador' onClick={lessItems}>-</button>
+        <button className='btn btn-contador' onClick={moreItems}>+</button>
         <br />
-        <button className=' px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full leading-3' onClick={addCountedItem}>Agregar a carrito</button>
+        <button className='btn' onClick={addCountedItem}>Agregar a carrito</button>
     </div>
   )
 }

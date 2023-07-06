@@ -3,8 +3,7 @@
     text-align: center;
     width: 50%;
     margin: 50px auto;
-    border: 1px solid ;
-    background-color: #FAEAB4;
+    border: 2px solid #DED1A6;
 }
 
 h3 {
@@ -13,7 +12,6 @@ h3 {
 
 .imgDetails {
     margin: 10px;
-    background-color: #FAEAB4;
 }
 
 .imgDetails img {
@@ -23,13 +21,10 @@ h3 {
 .infoDetails {
     margin-top: 15px;
     padding-top: 15px;
-    background-color: #FAD869;
+    background-color: #DED1A6;
 }
 
-.btnFinalizarCompra {
-    font-size: 16px;
-    height: 40px;
-    width: 250px;
+.btn-finalizarCompra {
     margin-bottom: 10px;
 }
 

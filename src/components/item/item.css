@@ -1,7 +1,7 @@
 .item{
     width: 500px;
     margin: 20px;
-    border: 2px solid #C7AC54;
+    border: 2px solid #DED1A6;
     border-radius: 5px;
 }
 
@@ -11,19 +11,14 @@
 }
 
 .info {
-    background-color: #C7AC54;
-    height: 230px;
+    background-color: #DED1A6;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.info button {
-    font-size: 16px;
-    height: 40px;
-    width: 250px;
-}
 
 .item--outOfStock {
     filter: grayscale(100);

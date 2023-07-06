@@ -2,19 +2,39 @@
     width: 100%;
 }
 
-.texto {
-    background-color: #FAD869;
+.sobreNosotros {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    margin: 50px;
+}
+
+.imgCortadora {
+    background-color: #DED1A6;
+    padding: 50px;
+    width: 40%;
     border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 100px;
-    padding: 10px;
-    width: 75%
+}
+
+.imgCortadora img {
+    width: 100%;
+}
+
+.textoSobreNos {
+    width: 40%;
+    margin-left: 5px;
+    background-color: #DED1A6;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .h1Home {
     border: none;
-    margin: 10px auto 20px;
+    margin: 50px auto 50px;
     padding-top: 10px;
     font-size: 46px;
 }

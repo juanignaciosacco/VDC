@@ -22,7 +22,7 @@ const ItemCart = ({imgUrl, tipoAnimal, nombreProd, precio, cantidad, id}) => {
                 <p className='m-1.5'>Cantidad: {cantidad}</p>
             </div>
             <div>
-                <button onClick={quitarProducto} className='btnQuitar transition-colors duration-300 bg-slate-200 hover:bg-slate-600 text-black-100 shadow-slate-400/30'>Quitar</button>
+                <button onClick={quitarProducto} className='btn'>Quitar</button>
             </div>
         </div>
     )

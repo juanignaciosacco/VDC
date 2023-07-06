@@ -42,7 +42,7 @@ const Contacto = () => {
                 <textarea name="mensaje" id="mensaje" value={user.asunto} onChange={changeHandler} />
 
                 <ReCAPTCHA className="captcha" sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12" />
-                <button className="btnEnviarForm">Enviar</button>
+                <button className="btn btnEnviarForm">Enviar</button>
 
             </form>
         </div>

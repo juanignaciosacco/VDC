@@ -8,6 +8,12 @@ h2 {
     text-align: center;
 }
 
+input {
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 textarea { 
     border: 2px solid black;
     height: 150px;

@@ -47,10 +47,12 @@ const ItemDetails = () => {
                     <div className="infoDetails">
                         <h3 className="text-2xl">{producto.Nombre}</h3>
                         <p className="m-2">{producto.Descripcion}</p>
-                        <p className="m-2">Stock: {producto.Stock}</p>
+                        <p className="stockTxt">Stock: {producto.Stock}</p>
                         <p className="m-2">${producto.Precio}</p>
-                        <p className="m-2">Cantidad seleccionada: {contador}</p>
-                        {contador === 0 ? <ItemCount className='m-2' stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button className="my-1.5 px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full" onClick={buttonClickHandler}>Finalizar compra</button></Link>}
+                        {contador !== 0 && (
+                            <p className="cantidadSelecTxt">Cantidad seleccionada: {contador}</p>
+                        )}
+                        {contador === 0 ? <ItemCount className='m-2' stock={producto.stock} onAdd={addCounterState}/> : <Link to={'/Cart'}><button className="btn btn-finalizarCompra" onClick={buttonClickHandler}>Finalizar compra</button></Link>}
                     </div>
             </div>
             )}

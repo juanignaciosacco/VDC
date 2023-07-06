@@ -13,7 +13,7 @@ const Item = ({imgUrl, nombreProd, precio, cantidad, stock, id}) => {
                             <p>Stock: {stock}</p>
                             {cantidad != null && <p className='m-1.5'>Cantidad: {cantidad}</p>}
                             <p className='m-1.5'>${precio}</p>
-                            <Link className='m-1.5' to={`/itemDetails/item/${id}`}><button className='px-6 py-2 text-sm bg-slate-200 hover:bg-slate-400 text-black-500 rounded rounded-full'>Ver detalle</button></Link>
+                            <Link className='m-1.5' to={`/itemDetails/item/${id}`}><button className='btn'>Ver detalle</button></Link>
                     </div>
                 </div>
             ):(
@@ -25,7 +25,7 @@ const Item = ({imgUrl, nombreProd, precio, cantidad, stock, id}) => {
                         <p>Stock: SIN STOCK!!</p>
                         {cantidad != null && <p>Cantidad: {cantidad}</p>}
                         <p>${precio}</p>
-                        <Link to={`/itemDetails/item/${id}`}><button className='px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full bg-slate-200 hover:bg-slate-600 text-black-100 shadow-slate-400/30'>Ver detalle</button></Link>
+                        <Link to={`/itemDetails/item/${id}`}><button className='btn'>Ver detalle</button></Link>
                     </div>
                 </div>
             )}

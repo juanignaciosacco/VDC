@@ -18,11 +18,10 @@
 }
 
 .cartInfo {
-    /* padding: 50px; */
     width: 500px;
     height: 200px;
     text-align: center;
-    border: 2px solid #3F7175;
+    border: 2px solid #DED1A6;
 }
 
 .cartInfo button {

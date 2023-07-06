@@ -1,6 +1,4 @@
-import './itemListContainer.css'
 import ItemList from '../../components/itemList/ItemList'
-import FilteredItemList from '../../components/filteredItemList/FilteredItemList'
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
@@ -10,10 +8,7 @@ const ItemListContainer = () => {
 
     return (
         <div>
-
-            {productos == 'productos' ? <ItemList destacados={false} /> : <ItemList destacados={true}/>}
-
-            {/* {categoria !== undefined ? <FilteredItemList categoria={categoria} /> : <ItemList/>} */}
+            {productos === 'productos' ? <ItemList destacados={false} /> : <ItemList destacados={true}/>}
         </div>
     )
 }

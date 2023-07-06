@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import Item from '../item/Item';
 import '../itemList/itemList.css'
 
@@ -10,7 +10,6 @@ const FilteredItemList = ({categoria}) => {
     useEffect(() => {
         const db = getFirestore()
         const itemsFiltrados = collection(db, 'productos')
-        // const q = query(itemsFiltrados, where('categoria', '==', categoria))
         getDocs(itemsFiltrados).then((snapshot) => {
             const arrayItems = snapshot.docs.map((prod) => ({
                 id: prod.id,
