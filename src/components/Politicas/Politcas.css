@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2023.
+ */
+
+.politicas {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.politicas ul {
+    list-style-position: inside;
+}
+

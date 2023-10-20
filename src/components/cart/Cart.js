@@ -6,7 +6,7 @@ import ItemCart from "../itemCart/ItemCart"
 
 const Cart = () => {
 
-    const {productosAgregados, precioTotal, totalItems, clearAllItems} = useContext(CartContext)
+    const { productosAgregados, precioTotal, totalItems, clearAllItems } = useContext(CartContext)
 
     const limpiarCarrito = () => {
         clearAllItems()

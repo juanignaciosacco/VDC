@@ -1,0 +1,60 @@
+.imgCarousel {
+    width: 500px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-image {
+    max-width: 100%;
+    max-height: 300px;
+  }
+  
+  .carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel-thumbnail {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    object-fit: contain;
+  }
+  
+  .carousel-thumbnail.selected {
+    border: 2px solid gray;
+  }
+  
+  .carousel-button {
+    margin: 10px;
+  }
+
+  .carousel-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .flechasCarousel {
+    font-size: 36px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    
+    .imgCarousel {
+      width: 400px;
+      height: 300px;
+    }
+
+    .flechasCarousel {
+      font-size: 20px;
+    }
+
+  }

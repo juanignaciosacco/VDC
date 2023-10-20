@@ -6,12 +6,55 @@ h2 {
 .footer {
     text-align: center;
     margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     border-top: solid 2px #7A7258;
     width: 80%;
+}
+
+.iconos {
+    width: 33%;
+}
+
+.linkPoliticas {
+    width: 33%;
 }
 
 .footer i {
     font-size: 40px;
     margin: 10px;
     color: #7A7258;
+}
+
+.logoJIS {
+    width: 33%;
+}
+
+.logoJIS img {
+    width: 30%;
+}
+
+@media only screen and (max-width: 736px) {
+    .footer {
+        row-gap: 20px;
+    }
+
+    .iconos {
+        width: auto;
+    }
+
+    .linkPoliticas {
+        width: auto;
+    }
+
+    .logoJIS {
+        width: auto;
+    }
+
+    .logoJIS img {
+        width: 50%;
+    }
 }

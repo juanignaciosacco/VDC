@@ -8,24 +8,26 @@ import { ItemsProvider } from './contextos/CartContext'
 import ContactForm from './components/contactForm/ContactForm';
 import Footer from './components/footer/Footer';
 import Contacto from './components/contacto/Contacto';
+import Politicas from "./components/Politicas/Politicas";
 
 function App() {
-  return (
-      <BrowserRouter>
-        <ItemsProvider>
-        <Example />
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/:productos" element={<ItemListContainer />} />
-              <Route exact path="/itemDetails/item/:id" element={<ItemDetailsContainer />} />
-              <Route exact path='/cart' element={<Cart />} />
-              <Route exact path='/formularioContacto' element={<ContactForm />} />
-              <Route exact path='/contacto' element={<Contacto />} />
-            </Routes> 
-        </ItemsProvider>
-        <Footer />
-      </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <ItemsProvider>
+                <Example />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/:productos" element={<ItemListContainer />} />
+                    <Route exact path="/itemDetails/item/:id" element={<ItemDetailsContainer />} />
+                    <Route exact path='/cart' element={<Cart />} />
+                    <Route exact path='/formularioContacto' element={<ContactForm />} />
+                    <Route exact path='/contacto' element={<Contacto />} />
+                    <Route exact path='/politicasDePrivacidad' element={<Politicas />} />
+                </Routes>
+            </ItemsProvider>
+            <Footer />
+        </BrowserRouter>
+    );
 }
 
 export default App;
