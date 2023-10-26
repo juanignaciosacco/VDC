@@ -1,52 +1,66 @@
-import ReCAPTCHA from "react-google-recaptcha"
-import emailjs from '@emailjs/browser'
-import { useState } from "react"
-import './contacto.css'
+import ReCAPTCHA from "react-google-recaptcha";
+import React from "react";
+import "./contacto.css";
 
-const Contacto = () => {
+class Contacto extends React.Component {
+  submitHandler = (ev) => {
+    ev.preventDefault();
 
-    const emptyForm = {nombre: ' ', email: ' ', telefono: ' '}
-    const [user, setUser] = useState(emptyForm)
+    // Crear un objeto FormData a partir del formulario
+    const formData = new FormData(ev.target);
 
-    const changeHandler = (ev) => {
-        setUser({...user, [ev.target.name]: ev.target.value})
-    }
+    // Hacer algo con formData, como añadir más datos
+    formData.append("service_id", "service_ywhqy7s");
+    formData.append("template_id", "template_n3av58s");
+    formData.append("user_id", "POqrx_snIIGH6dOSx");
 
-    const submitHandler = (ev) => {
-        emailjs.sendForm('service_ywhqy7s', 'template_n3av58s', ev.target, 'POqrx_snIIGH6dOSx')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-    }
+    // Enviar formData al servidor usando Fetch u otro método
+    fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error al enviar el mail!");
+        } else {
+          alert("Tu email fue enviado!");
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        console.log("Oops... " + error.message);
+      });
+  };
 
+  render() {
     return (
-        <div className="formularioContacto">
-            <h2>Contacto</h2>
-            <form  onSubmit={submitHandler}>
+      <div className="formularioContacto">
+        <h2>Contacto</h2>
+        <form id="myForm" onSubmit={this.submitHandler}>
+          <label htmlFor="nombre">Nombre</label>
+          <input name="nombre" id="nombre" />
 
-                <label htmlFor="nombre">Nombre</label>
-                <input name="nombre" id="nombre" value={user.nombre} onChange={changeHandler} />
+          <label htmlFor="email">Email</label>
+          <input name="email" id="email" />
 
-                <label htmlFor="email">Email</label>
-                <input name="email" id="email" value={user.email} onChange={changeHandler} />
+          <label htmlFor="telefono">Telefono</label>
+          <input name="telefono" id="telefono" />
 
-                <label htmlFor="telefono">Telefono</label>
-                <input name="telefono" id="telefono" value={user.telefono} onChange={changeHandler} />
+          <label htmlFor="asunto">Asunto</label>
+          <input name="asunto" id="asunto" />
 
-                <label htmlFor="asunto">Asunto</label>
-                <input name="asunto" id="asunto" value={user.asunto} onChange={changeHandler} />
+          <label htmlFor="mensaje">Mensaje</label>
+          <textarea name="mensaje" id="mensaje" />
 
-                <label htmlFor="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje" value={user.asunto} onChange={changeHandler} />
-
-                <ReCAPTCHA className="captcha" sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12" />
-                <button className="btn btnEnviarForm">Enviar</button>
-
-            </form>
-        </div>
-        )
+          <ReCAPTCHA
+            className="captcha"
+            sitekey="6LftAxgkAAAAAMRdfNtPthaQiYeqj2dX7eR7Cs12"
+          />
+          <button className="btn btnEnviarForm">Enviar</button>
+        </form>
+      </div>
+    );
+  }
 }
 
-export default Contacto
+export default Contacto;

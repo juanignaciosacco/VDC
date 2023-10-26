@@ -29,7 +29,6 @@ const ContactForm = () => {
         emailjs.sendForm('service_ywhqy7s', 'template_n3av58s', ev.target, 'POqrx_snIIGH6dOSx')
         .then((result) => {
             console.log(result.text);
-            console.log(idOrden)
         }, (error) => {
             console.log(error.text);
         });

@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, HashRouter} from 'react-router-dom';
 import ItemListContainer from './routes/itemListContainer/ItemListContainer';
 import Home from './routes/home/Home';
 import ItemDetailsContainer from './routes/itemDetailsContainer/ItemDetailsContainer';
@@ -12,7 +12,7 @@ import Politicas from "./components/Politicas/Politicas";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <ItemsProvider>
                 <Example />
                 <Routes>
@@ -26,7 +26,7 @@ function App() {
                 </Routes>
             </ItemsProvider>
             <Footer />
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 

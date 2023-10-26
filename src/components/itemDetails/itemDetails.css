@@ -44,7 +44,6 @@ h3 {
 @media only screen and (max-width: 375px) {
 
     .itemsDetails .contenedor {
-        width: 100%;
         flex-direction: column;
     }
 
@@ -67,6 +66,10 @@ h3 {
 
 @media only screen and (max-width: 480px) {
 
+    .itemsDetails .contenedor {
+        flex-direction: column;
+    }
+
     .itemsDetails {
         width: 90%;
     }
@@ -78,7 +81,6 @@ h3 {
     }
 
     .imgDetails img {
-        /* width: 60%; */
         margin: 0 auto;
     }
 
